@@ -14,17 +14,18 @@
 JOBSTART $*
 
 STEPSTART getSonet0sim
-
 EXECRUBY ${RUBY_DIR}/getSonet0sim.rb
 echo ${RETCD} >> ${LOGFILE}
-
 STEPEND
 
 STEPSTART makeSonet0sim
-
 EXECRUBY ${RUBY_DIR}/makeSonet0sim.rb
 echo ${RETCD} >> ${LOGFILE}
+STEPEND
 
+STEPSTART sndArtSonet0sim
+EXECRUBY ${RUBY_DIR}/sndArtSonet0sim.rb
+echo ${RETCD} >> ${LOGFILE}
 STEPEND
 
 JOBEND
