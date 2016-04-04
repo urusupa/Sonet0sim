@@ -25,7 +25,7 @@ begin
 			filehdl.puts line
 		end
 	end
-	
+	filehdl.puts Time.now.strftime("%Y%m%d%H%M%S") + "000"
 rescue => ex
 	APPEND_LOGFILE(ex)
 ensure
